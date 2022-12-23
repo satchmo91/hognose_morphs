@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>HognoseMorphs</title>
+</head>
+<body>
+    <!-- Header -->
+    <div style="flex: auto;">
+        <div class="text_10 center hero">
+            HognoseMorphs
+        </div>
+        <div class="divider bg_white"></div>
+        <div class="container" style="height: 60px; display:grid; place-items: center;">
+            <input type="text" placeholder="type morph here..." id="textBox" list="suggestions">
+            <datalist id="suggestions"></datalist>
+        </div>
+        <div class="divider bg_white"></div>
+    </div>
+    <!-- gallery -->
+    <div class="gallery" id="gallery"></div>
+<script src="./script.js" type="module"></script>
+</body>
+</html>
