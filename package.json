@@ -10,10 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fuse.js": "^6.6.2",
-    "lightense-images": "^1.0.17",
     "node": "^19.3.0",
-    "prompt-sync": "^4.2.0",
-    "simplelightbox": "^2.11.0"
+    "prompt-sync": "^4.2.0"
   }
 }

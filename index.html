@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="lightbox.css">
     <title>HognoseMorphs</title>
 </head>
 <body>
@@ -16,15 +17,23 @@
         <div style="text-align: center;">
             <h1>THIS SITE IS STILL UNDER CONSTRUCTION <br> If you would like to contribute photos or info to the site, please email me at eherrmann1991@gmail.com</h1>
         </div>
-        <div class="divider bg_white"></div>
+        
+        <!-- navbar -->
+        <div class="navbar">
+            <a href="./pages/about.html">ABOUT</a>
+        </div>
+        <br>
+        <div class="divider"></div>
         <div class="container" style="height: 60px; display:grid; place-items: center;">
             <input type="text" placeholder="type morph here..." id="textBox" list="suggestions">
             <datalist id="suggestions"></datalist>
         </div>
-        <div class="divider bg_white"></div>
+        <div class="divider"></div>
     </div>
     <!-- gallery -->
     <div class="gallery" id="gallery"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./script.js" type="module"></script>
+<script src="./lightbox.js"></script>
 </body>
 </html>

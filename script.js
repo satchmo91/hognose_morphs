@@ -33,6 +33,11 @@ function loadImages () {
 
     data.images.forEach(image => {
 
+    let a = document.createElement("a");
+    a.href = "./img/" + image.src;
+    a.setAttribute("data-lightbox", "test")
+    a.setAttribute("data-title", image.traits);
+
     let containerDiv = document.createElement("div");
     containerDiv.className = "imgContainer";
     containerDiv.id = image.id;
@@ -49,7 +54,9 @@ function loadImages () {
     topOverlayDiv.className = "topOverlay";
     topOverlayDiv.innerHTML = image.traits;
 
-    containerDiv.appendChild(img);
+    a.appendChild(img)
+    containerDiv.appendChild(a);
+    // containerDiv.appendChild(img);
     containerDiv.appendChild(topOverlayDiv);
     containerDiv.appendChild(overlayDiv);
     gallery.appendChild(containerDiv);
