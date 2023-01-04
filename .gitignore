@@ -1,1 +1,9 @@
-#ignore all .txt files
+#ignore POC folder
+POC/
+
+#ignore old .js files and setup files
+addImagePrompt.js
+addImages.js
+PromptAddImages.bat
+SERVER_START.txt
+testdata.json
