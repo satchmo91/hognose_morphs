@@ -111,10 +111,10 @@ input {
 }
 
 .navbar a {
-    min-width: 200px;
     color: var(--main-text-color);
     font-size: x-large;
     border: var(--main-text-color);
+    text-align: center;
 }
 
 /* utility classes */
