@@ -25,13 +25,15 @@
         </div>
         <br>
         <div class="divider"></div>
-        <div class="container" style="height: 60px; display:grid; place-items: center;">
-            <input type="text" placeholder="type morph here..." id="textBox" list="suggestions">
-            <datalist id="suggestions"></datalist>
+        <div class="container" style="height: 60px; display:flex; place-items: center;">
+            <button id="searchButton">Search</button>
+            <input type="text" placeholder="type morph here..." id="textBox">
+            <button id="resetButton">Reset Images</button>
         </div>
         <div class="divider"></div>
     </div>
     <!-- gallery -->
+    <div hidden id="emptyGallery" class="text_2 center"><br>There is nothing to display. Please refresh images.</div>
     <div class="gallery" id="gallery"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./script.js" type="module"></script>

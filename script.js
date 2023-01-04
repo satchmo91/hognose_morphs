@@ -1,10 +1,21 @@
 const textBox = document.getElementById("textBox");
 const gallery = document.getElementById("gallery");
-const suggestions = document.getElementById("suggestions");
+const searchButton = document.getElementById("searchButton");
+const resetButton = document.getElementById("resetButton");
+const emptyGallery = document.getElementById("emptyGallery");
 
 import data from "./data.json" assert { type: "json"};
+import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js'
+
+const fuse = new Fuse(data.images, {
+    keys: ['traits']
+})
 
 const traitList = ["WILD", "ALBINO","CONDA","SUPER-CONDA","ARCTIC","SUPER-ARCTIC","AXANTHIC","CARAMEL","EXTREME RED","GRANITE","GREEN HYPO","HYPO","DUTCH HYPO","JAG","LAVENDER","LEMON GHOST","LEUSISTIC","MOCHA","PINK PASTEL","PISTACHIO","PURPLE LINE","RBE PASTEL","SABLE","SHADOW","SWISS CHOCOLATE","TIGER","TOFFEE","TWINSPOT"];
+
+searchButton.addEventListener("click", () => searchForImage(textBox.value));
+resetButton.addEventListener("click", loadImages);
+
 
 window.onload = (e) => {
     loadImages();
@@ -12,24 +23,22 @@ window.onload = (e) => {
     traitList.forEach(trait => {
         let option = document.createElement("option");
         option.value = trait;
-        suggestions.appendChild(option);
     });
 }
 
 textBox.addEventListener("keyup", (e) => {
     if(e.key == "Enter") {
-        console.log("test");
-    }
-
-    if (e.key == "Backspace") {
-        resetImages();
-        searchForImage();
+        searchForImage(textBox.value)
     }
 });
 
-textBox.addEventListener("keyup", (e) => searchForImage());
 
 function loadImages () {
+    emptyGallery.hidden = true;
+
+    textBox.value = ""
+
+    gallery.innerHTML = '';
 
     data.images.forEach(image => {
 
@@ -56,43 +65,26 @@ function loadImages () {
 
     a.appendChild(img)
     containerDiv.appendChild(a);
-    // containerDiv.appendChild(img);
     containerDiv.appendChild(topOverlayDiv);
     containerDiv.appendChild(overlayDiv);
     gallery.appendChild(containerDiv);
     });
 }
 
-function resetImages() {
-    let parent = document.getElementById("gallery");
-    
-    while(parent.firstChild) {
-        parent.removeChild(parent.firstChild)
-    }
+function searchForImage(value) {
+    let resultsArray=[];
+    let searchResults = fuse.search(value);
+    searchResults.forEach(result => {
+        resultsArray.push(result.item.id);
+    })
 
-    loadImages();
-}
-
-function searchForImage() {
-    let searchText = textBox.value.toUpperCase();
-
-    if(searchText === "") {
-        resetImages();
-        return;
-    }
-
-    data.images.forEach(image => {
-        let id = image.id;
-        for (let index = 0; index < image.traits.length; index++) {
-            if(image.traits[index].toUpperCase().includes(searchText)){
-                break;
-            } else {
-                if(document.getElementById(id)){
-                    document.getElementById(id).remove();
-                }
-            }
-            
+    document.querySelectorAll(".imgContainer").forEach(element => {
+        if(!resultsArray.includes(parseInt(element.id))) {
+            document.getElementById(element.id).remove();
         }
-    });
-}
+    })
 
+    if(gallery.innerHTML == "") {
+        emptyGallery.hidden = false;
+    }
+}
