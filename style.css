@@ -48,6 +48,7 @@ input {
     flex-wrap: wrap;
     padding-left: 5%;
     padding-right: 5%;
+    justify-content: center;
 }
 
 .imgContainer {
@@ -134,7 +135,29 @@ input {
     font-size: x-large;
     border: var(--main-text-color);
     text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 10px;
 }
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 25%;
+  }
+
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(212, 112, 30); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
 
 /* utility classes */
 

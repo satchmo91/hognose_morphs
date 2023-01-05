@@ -8,6 +8,7 @@ import data from "./data.json" assert { type: "json"};
 import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js'
 
 const fuse = new Fuse(data.images, {
+    threshold: 0.3,
     keys: ['traits']
 })
 
@@ -72,6 +73,10 @@ function loadImages () {
 }
 
 function searchForImage(value) {
+    if(value == ""){
+        return;
+    }
+
     let resultsArray=[];
     let searchResults = fuse.search(value);
     searchResults.forEach(result => {
@@ -87,4 +92,6 @@ function searchForImage(value) {
     if(gallery.innerHTML == "") {
         emptyGallery.hidden = false;
     }
+
+    textBox.value = "";
 }
