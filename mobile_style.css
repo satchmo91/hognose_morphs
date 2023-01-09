@@ -1,0 +1,96 @@
+:root {
+    --main-bg-color: #101010;
+    /* --main-text-color: #9efbff; */
+    --main-text-color: rgb(255, 255, 255);
+}
+
+html {
+    width: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.center{
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.text_10 {
+    font-size: 2em;
+}
+
+.construction h1{
+    font-size: 12pt;
+}
+
+.navbar {
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+button {
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    height: 100%;
+    border: none;
+}
+
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+}
+
+.imgContainer {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    align-content: center;
+    align-self: baseline;
+}
+
+.img {
+    vertical-align: middle;
+    /* max-width: 400px; */
+    max-height: 400px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    height: max-content;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.topOverlay {
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    height: max-content;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
