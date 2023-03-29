@@ -9,223 +9,258 @@
     },
     {
       "id": 1,
+      "src": "Albino,Tiger,_Anonymous.png",
+      "credit": "Anonymous",
+      "overlay": "Anonymous",
+      "traits": ["Albino", "Tiger"]
+    },
+    {
+      "id": 2,
       "src": "Albino,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Albino"]
     },
     {
-      "id": 2,
+      "id": 3,
       "src": "Arctic,Albino,Conda,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
       "traits": ["Arctic", "Albino", "Conda"]
     },
     {
-      "id": 3,
+      "id": 4,
+      "src": "Arctic,Albino,Twinspot,_Snakes of Spades.jpg",
+      "credit": "Snakes of Spades",
+      "overlay": "Snakes of Spades",
+      "traits": ["Arctic", "Albino", "Twinspot"]
+    },
+    {
+      "id": 5,
       "src": "Arctic,_HognoseBest.2.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Arctic"]
     },
     {
-      "id": 4,
+      "id": 6,
       "src": "Arctic,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Arctic"]
     },
     {
-      "id": 5,
+      "id": 7,
       "src": "Axanthic,Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Axanthic", "Conda"]
     },
     {
-      "id": 6,
+      "id": 8,
       "src": "Axanthic,Sable,_Rostral Reptiles.jpg",
       "credit": "Rostral Reptiles",
       "overlay": "Rostral Reptiles",
       "traits": ["Axanthic", "Sable"]
     },
     {
-      "id": 7,
+      "id": 9,
       "src": "Axanthic,_Aj from Hernandez Hoggies.jpg",
       "credit": "Aj from Hernandez Hoggies",
       "overlay": "Aj from Hernandez Hoggies",
       "traits": ["Axanthic"]
     },
     {
-      "id": 8,
+      "id": 10,
       "src": "Caramel,Dutch Hypo,Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Caramel", "Dutch Hypo", "Conda"]
     },
     {
-      "id": 9,
+      "id": 11,
       "src": "Conda,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Conda"]
     },
     {
-      "id": 10,
+      "id": 12,
       "src": "Conda,_Moonstoneplains.jpg",
       "credit": "Moonstoneplains",
       "overlay": "Moonstoneplains",
       "traits": ["Conda"]
     },
     {
-      "id": 11,
+      "id": 13,
       "src": "Extreme Red,Albino,Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Extreme Red", "Albino", "Conda"]
     },
     {
-      "id": 12,
+      "id": 14,
+      "src": "Extreme Red,Albino,Super-Conda,_Anonymous.jpg",
+      "credit": "Anonymous",
+      "overlay": "Anonymous",
+      "traits": ["Extreme Red", "Albino", "Super-Conda"]
+    },
+    {
+      "id": 15,
       "src": "Jag,_Monki.jpg",
       "credit": "Monki",
       "overlay": "Monki",
       "traits": ["Jag"]
     },
     {
-      "id": 13,
+      "id": 16,
       "src": "Lavender,Conda,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
       "traits": ["Lavender", "Conda"]
     },
     {
-      "id": 14,
+      "id": 17,
       "src": "Lavender,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
       "traits": ["Lavender"]
     },
     {
-      "id": 15,
+      "id": 18,
       "src": "Lemon Ghost,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Lemon Ghost"]
     },
     {
-      "id": 16,
+      "id": 19,
       "src": "LemonGhost,_ShovelNoseHogs.jpg",
       "credit": "ShovelNoseHogs",
       "overlay": "ShovelNoseHogs",
       "traits": ["LemonGhost"]
     },
     {
-      "id": 17,
+      "id": 20,
       "src": "Mocha,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Mocha"]
     },
     {
-      "id": 18,
+      "id": 21,
       "src": "Purple Line,Extreme Red,Albino,Super-Conda,_HognoseBest.2.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Purple Line", "Extreme Red", "Albino", "Super-Conda"]
     },
     {
-      "id": 19,
+      "id": 22,
       "src": "Purple Line,Extreme Red,Albino,Super-Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Purple Line", "Extreme Red", "Albino", "Super-Conda"]
     },
     {
-      "id": 20,
+      "id": 23,
       "src": "Purple Line,Extreme Red,Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Purple Line", "Extreme Red", "Conda"]
     },
     {
-      "id": 21,
+      "id": 24,
       "src": "Sable,Toffee,_DustinSMK.jpg",
       "credit": "DustinSMK",
       "overlay": "DustinSMK",
       "traits": ["Sable", "Toffee"]
     },
     {
-      "id": 22,
+      "id": 25,
       "src": "Sable,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Sable"]
     },
     {
-      "id": 23,
+      "id": 26,
       "src": "Sable,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
       "traits": ["Sable"]
     },
     {
-      "id": 24,
+      "id": 27,
+      "src": "Super-Arctic,Toffee,_Anonymous.jpg",
+      "credit": "Anonymous",
+      "overlay": "Anonymous",
+      "traits": ["Super-Arctic", "Toffee"]
+    },
+    {
+      "id": 28,
       "src": "Super-Arctic,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Super-Arctic"]
     },
     {
-      "id": 25,
+      "id": 29,
       "src": "Super-Arctic,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
       "traits": ["Super-Arctic"]
     },
     {
-      "id": 26,
+      "id": 30,
       "src": "Super-Conda,Caramel,Albino,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Super-Conda", "Caramel", "Albino"]
     },
     {
-      "id": 27,
+      "id": 31,
       "src": "Super-Conda,_Moonstoneplains.jpg",
       "credit": "Moonstoneplains",
       "overlay": "Moonstoneplains",
       "traits": ["Super-Conda"]
     },
     {
-      "id": 28,
+      "id": 32,
       "src": "Toffee,Axanthic,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Toffee", "Axanthic"]
     },
     {
-      "id": 29,
+      "id": 33,
+      "src": "Toffee,Conda,_Anonymous.jpg",
+      "credit": "Anonymous",
+      "overlay": "Anonymous",
+      "traits": ["Toffee", "Conda"]
+    },
+    {
+      "id": 34,
       "src": "Toffee,Conda,_HognoseBest.jpg",
       "credit": "HognoseBest",
       "overlay": "HognoseBest",
       "traits": ["Toffee", "Conda"]
     },
     {
-      "id": 30,
+      "id": 35,
       "src": "Wild,_Colubrid_N_Crew.jpg",
       "credit": "Colubrid_N_Crew",
       "overlay": "Colubrid_N_Crew",
       "traits": ["Wild"]
     },
     {
-      "id": 31,
+      "id": 36,
       "src": "Wild,_McKenzie@Sought-After-Serpents.jpg",
       "credit": "McKenzie@Sought-After-Serpents",
       "overlay": "McKenzie@Sought-After-Serpents",
       "traits": ["Wild"]
     },
     {
-      "id": 32,
+      "id": 37,
       "src": "Wild,_Nidhoggnoses.jpeg",
       "credit": "Nidhoggnoses",
       "overlay": "Nidhoggnoses",
