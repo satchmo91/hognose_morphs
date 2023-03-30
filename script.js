@@ -1,8 +1,6 @@
-const textBox = document.getElementById("textBox");
 const gallery = document.getElementById("gallery");
-const searchButton = document.getElementById("searchButton");
-const resetButton = document.getElementById("resetButton");
 const emptyGallery = document.getElementById("emptyGallery");
+const sortButtons = document.querySelectorAll("button.sortButton");
 
 import data from "./data.json" assert { type: "json"};
 import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js'
@@ -13,10 +11,7 @@ const fuse = new Fuse(data.images, {
 })
 
 const traitList = ["WILD", "ALBINO","CONDA","SUPER-CONDA","ARCTIC","SUPER-ARCTIC","AXANTHIC","CARAMEL","EXTREME RED","GRANITE","GREEN HYPO","HYPO","DUTCH HYPO","JAG","LAVENDER","LEMON GHOST","LEUSISTIC","MOCHA","PINK PASTEL","PISTACHIO","PURPLE LINE","RBE PASTEL","SABLE","SHADOW","SWISS CHOCOLATE","TIGER","TOFFEE","TWINSPOT"];
-
-searchButton.addEventListener("click", () => searchForImage(textBox.value));
-resetButton.addEventListener("click", loadImages);
-
+const traitFilter = [];
 
 window.onload = (e) => {
     loadImages();
@@ -27,17 +22,35 @@ window.onload = (e) => {
     });
 }
 
-textBox.addEventListener("keyup", (e) => {
-    if(e.key == "Enter") {
-        searchForImage(textBox.value)
-    }
-});
+sortButtons.forEach(button => {
+    button.addEventListener('click', selectTrait)
+})
 
+function selectTrait(e) {
+    let className = e.target.className
+    let trait = e.target.innerHTML;
+
+    //Activate Button
+    if(className == "sortButton") {
+        e.target.className ="sortButtonActive"
+        traitFilter.push(trait);
+        filterImages()
+    //Deactivate Button
+    } else {
+        e.target.className = "sortButton"
+        traitFilter.splice(traitFilter.indexOf(trait), 1)
+        if(traitFilter.length == 0) {
+            loadImages()
+            return;
+        } else {
+            loadImages()
+            filterImages()
+        }
+    }
+}
 
 function loadImages () {
     emptyGallery.hidden = true;
-
-    textBox.value = ""
 
     gallery.innerHTML = '';
 
@@ -72,26 +85,28 @@ function loadImages () {
     });
 }
 
-function searchForImage(value) {
-    if(value == ""){
+function filterImages() {
+    if(traitFilter.length == 0){
+        loadImages();
         return;
     }
 
-    let resultsArray=[];
-    let searchResults = fuse.search(value);
-    searchResults.forEach(result => {
-        resultsArray.push(result.item.id);
-    })
-
     document.querySelectorAll(".imgContainer").forEach(element => {
-        if(!resultsArray.includes(parseInt(element.id))) {
-            document.getElementById(element.id).remove();
+        let remove = true
+        traitFilter.forEach(trait => {
+            if(data.images[element.id].traits.includes(trait)) {
+                remove = false
+            } else {
+                remove = true
+            }
+        });
+
+        if(remove) {
+            element.remove();
         }
     })
 
     if(gallery.innerHTML == "") {
         emptyGallery.hidden = false;
     }
-
-    textBox.value = "";
 }
