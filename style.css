@@ -2,6 +2,7 @@
     --main-bg-color: #101010;
     /* --main-text-color: #9efbff; */
     --main-text-color: rgb(255, 255, 255);
+    --text-accent-color: #F98B47;
 }
 
 html {
@@ -32,7 +33,7 @@ button.sortButton:active {
 }
 
 button.sortButton {
-    color: rgb(212, 112, 30);
+    color: var(--text-accent-color);
     background-color: var(--main-bg-color);
     border-radius: 20%;
     border-color: white;
@@ -43,7 +44,7 @@ button.sortButton {
 }
 
 button.sortButtonActive {
-    color: rgb(212, 112, 30);
+    color: var(--text-accent-color);
     background-color: rgba(0, 150, 100, 0.5);
     border-radius: 20%;
     border-color: white;
@@ -69,7 +70,8 @@ input {
 }
 
 .gallery {
-    margin-top: 10px;
+    margin-top: 2em;
+    margin-bottom: 4em;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -88,7 +90,7 @@ input {
 
 .img {
     vertical-align: middle;
-    /* max-width: 400px; */
+    max-width: 100%;
     max-height: 400px;
 }
 
@@ -116,7 +118,7 @@ input {
     width: 100%;
     height: max-content;
     color: white;
-    font-size: 20px;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -129,12 +131,8 @@ input {
 }
 
 .divider {
-    height: 5px;
+    height: 0.5em;
     background-color: var(--main-text-color);
-}
-
-.hero {
-    padding-bottom: 20px;
 }
 
 .container {
@@ -157,13 +155,18 @@ input {
     justify-content: center;
 }
 
+@media screen and (max-width: 440px) {
+    .navbar {
+      flex-direction: column;
+    }
+}
+  
+
 .navbar a {
     color: var(--main-text-color);
     font-size: x-large;
     border: var(--main-text-color);
     text-align: center;
-    margin-left: 2em;
-    margin-right: 2em;
     padding: 10px;
 }
 
@@ -197,9 +200,9 @@ ul li::before {
 }
 
 .text_5 {
-    font-size: 5em;
+    font-size: 10vw;
 }
 
 .text_2 {
-    font-size: 2em;
+    font-size: clamp(1em, 2em, 2em);
 }
